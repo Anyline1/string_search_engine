@@ -10,10 +10,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/")
+@AllArgsConstructor
 public class SearchEngineController {
 
-    @Autowired
-    private SearchEngineService searchEngineService;
+    private final SearchEngineService searchEngineService;
 
     @PostMapping("/addDocument")
     public void addDocument(@RequestBody Map<String, String> request){
