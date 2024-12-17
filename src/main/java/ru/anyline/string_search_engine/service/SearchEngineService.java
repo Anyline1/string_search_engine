@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
+@Data
 public class SearchEngineService {
-    @Getter
+    
     private List<Document> documents = new ArrayList<>();
     private Map<String, List<Document>> invertedIndex = new HashMap<>();
     private Map<String, Double> idf = new HashMap<>();
